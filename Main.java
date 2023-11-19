@@ -123,7 +123,6 @@ class EmployeeManagement {
                 employee.displayInfo();
             }
         }
-        System.out.println(("Employees not found"));
     }
 
     public void filterBySalary() {
