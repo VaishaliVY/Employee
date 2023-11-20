@@ -92,7 +92,6 @@ class EmployeeManagement {
         System.out.print("Enter your choice: ");
 
         int filterChoice = scanner.nextInt();
-        scanner.nextLine(); // Consume newline character
 
         switch (filterChoice) {
             case 1:
@@ -143,7 +142,6 @@ class EmployeeManagement {
 
         System.out.println("Enter maximum age: ");
         int maxAge = scanner.nextInt();
-        scanner.nextLine(); // Consume newline character
 
         for (Employee employee : employees.values()) {
             if (employee.getAge() >= minAge && employee.getAge() <= maxAge) {
@@ -179,7 +177,6 @@ class EmployeeManagement {
             System.out.print("Enter your choice: ");
 
             int updateChoice = scanner.nextInt();
-            scanner.nextLine(); // Consume newline character
 
             switch (updateChoice) {
                 case 1:
