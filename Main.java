@@ -71,16 +71,12 @@ enum Department {
 }
 
 class EmployeeManagement {
-    private Map<String, Employee> employees;
+    Map<String, Employee> employees;
     private Scanner scanner;
 
     public EmployeeManagement() {
         employees = new HashMap<>();
         scanner = new Scanner(System.in);
-    }
-
-    public void addEmployee(Employee employee) {
-        employees.put(employee.getFullName(), employee);
     }
 
     public void showAllEmployees() {
@@ -345,26 +341,16 @@ class EmployeeManagement {
 public class Main {
     public static void main(String[] args) {
         EmployeeManagement employeeManagement = new EmployeeManagement();
-        Employee emp1 = new Employee("Suresh", 30, "1993-05-15", 500000, Department.HR);
-        Employee emp2 = new Employee("Ramesh", 25, "1998-10-20", 600000, Department.ACCOUNTS);
-        Employee emp3 = new Employee("Dinesh", 23, "2000-08-30", 300000, Department.HR);
-        Employee emp4 = new Employee("Rajesh", 35, "1988-06-18", 800000, Department.DEVELOPMENT);
-        Employee emp5 = new Employee("Mukesh", 27, "1996-11-23", 650000, Department.ACCOUNTS);
-        Employee emp6 = new Employee("Kamesh", 32, "1991-03-12", 750000, Department.TESTING);
-        Employee emp7 = new Employee("Nithesh", 45, "1978-01-26", 950000, Department.DEVELOPMENT);
-        Employee emp8 = new Employee("Satheesh", 39, "1984-09-05", 800000, Department.TESTING);
-        Employee emp9 = new Employee("Vignesh", 29, "1994-02-10", 700000, Department.DEVELOPMENT);
-        Employee emp10 = new Employee("Mahesh", 48, "1975-04-02", 1100000, Department.DEVELOPMENT);
-        employeeManagement.addEmployee(emp1);
-        employeeManagement.addEmployee(emp2);
-        employeeManagement.addEmployee(emp3);
-        employeeManagement.addEmployee(emp4);
-        employeeManagement.addEmployee(emp5);
-        employeeManagement.addEmployee(emp6);
-        employeeManagement.addEmployee(emp7);
-        employeeManagement.addEmployee(emp8);
-        employeeManagement.addEmployee(emp9);
-        employeeManagement.addEmployee(emp10);
+        employeeManagement.employees.put("Suresh", new Employee("Suresh", 30, "1993-05-15", 500000, Department.HR));
+        employeeManagement.employees.put("Ramesh", new Employee("Ramesh", 25, "1998-10-20", 600000, Department.ACCOUNTS));
+        employeeManagement.employees.put("Dinesh", new Employee("Dinesh", 23, "2000-08-30", 300000, Department.HR));
+        employeeManagement.employees.put("Rajesh", new Employee("Rajesh", 35, "1988-06-18", 800000, Department.DEVELOPMENT));
+        employeeManagement.employees.put("Mukesh", new Employee("Mukesh", 27, "1996-11-23", 650000, Department.ACCOUNTS));
+        employeeManagement.employees.put("Kamesh", new Employee("Kamesh", 32, "1991-03-12", 750000, Department.TESTING));
+        employeeManagement.employees.put("Nithesh", new Employee("Nithesh", 45, "1978-01-26", 950000, Department.DEVELOPMENT));
+        employeeManagement.employees.put("Satheesh", new Employee("Satheesh", 39, "1984-09-05", 800000, Department.TESTING));
+        employeeManagement.employees.put("Vignesh", new Employee("Vignesh", 29, "1994-02-10", 700000, Department.DEVELOPMENT));
+        employeeManagement.employees.put("Mahesh", new Employee("Mahesh", 48, "1975-04-02", 1100000, Department.DEVELOPMENT));
         employeeManagement.run();
     }
 }
