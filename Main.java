@@ -67,7 +67,7 @@ class Employee {
 }
 
 enum Department {
-    DEVELOPMENT, TESTING, HR, ACCOUNTS   // Add more departments if needed
+    DEVELOPMENT, TESTING, HR, ACCOUNTS
 }
 
 class EmployeeManagement {
