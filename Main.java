@@ -67,18 +67,19 @@ class Employee {
 }
 
 enum Department {
-    DEVELOPMENT, TESTING, HR, ACCOUNTS
+    DEVELOPMENT, TESTING, HR, ACCOUNTS  
 }
 
 class EmployeeManagement {
-    Map<String, Employee> employees;
+    TreeMap<String, Employee> employees;
     private Scanner scanner;
 
     public EmployeeManagement() {
-        employees = new HashMap<>();
+        employees = new TreeMap<>();
         scanner = new Scanner(System.in);
     }
 
+    // Method to show all employees
     public void showAllEmployees() {
         employees.values().forEach(Employee::displayInfo);
     }
@@ -126,7 +127,6 @@ class EmployeeManagement {
 
         System.out.println("Enter maximum salary: ");
         double maxSalary = scanner.nextDouble();
-        scanner.nextLine(); // Consume newline character
 
         for (Employee employee : employees.values()) {
             if (employee.getSalary() >= minSalary && employee.getSalary() <= maxSalary) {
